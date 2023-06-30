@@ -4,7 +4,6 @@ const router = express.Router();
 const { register, login, updateUser } = require("../controllers/auth");
 const authUser = require("../middleware/authentication");
 const testUser = require("../middleware/testUser");
-const { mapKeys } = require("lodash");
 const apiLimiter = rateLimiter({
   windowsMS: 15 * 60 * 1000,
   max: 10,
